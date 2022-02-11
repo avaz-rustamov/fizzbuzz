@@ -11,14 +11,17 @@
 <body>
   <main>
     <div class="container-sm">
-      <h1 class="header text-center mt-5 mb-3 fs-60">FizzBuzz</h1>
-      <form class="form row" action="https://echo.htmlacademy.ru/">
+      <!-- HEADING -->
+      <h1 class="header text-center mt-5 mb-3 display-3">FizzBuzz</h1>
+
+      <!-- FORM -->
+      <form class="row form-js" action="https://echo.htmlacademy.ru/" method="GET">
         <div class="form-group mb-3 col-6">
-          <input type="number" class="form-control cal-6" id="number">
+          <input class="form-control fizzbuzz-input cal-6" type="number" name="number" placeholder="Enter number between 1 and 10.000" required>
         </div>
-        <button class="btn btn-warning btn-block col-6 p-0">View Result</button>
-        <div class="form-group">
-          <input class="form-control col-6" type="text" id="text">
+        <button type="submit" class="btn btn-warning btn-block col-6 p-0">Check</button>
+        <div class="rusult-js bg-secondary p-5 text-center display-3">
+          Check
         </div>
       </form>
     </div>
