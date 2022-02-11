@@ -20,7 +20,7 @@ elForm.addEventListener("submit", (evt) => {
   let inputValue = elFormInput.value;
 
   if (inputValue <= 0 || isNaN(inputValue)) {
-    return (elResult.textContent = `Enter number between 1 and 10.000`);
+    return (elResult.textContent = "Just enter the whole number!");
   }
 
   elResult.textContent = fizzBuzzCheck(inputValue);
