@@ -1,17 +1,20 @@
 let elForm = document.querySelector(".form-js");
-var elFormInput = elForm.querySelector(".fizzbuzz-input");
-var elResult = document.querySelector(".result");
+var elFormInput = document.querySelector(".fizzbuzz-input");
+var elResult = document.querySelector(".form-result");
 
-// elForm.addEventListener()
+elForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
 
+  let inputValue = elFormInput.value;
 
-const fizzBuzz = function(number) {
-  if (number % 3 === 0 && number % 5 === 0)
-    return ("FizzBuzz");
-  else if (number % 3 === 0)
-    return ("Fizz");
-  else if (number % 5 === 0)
-    return ("Buzz");
-  else return number
-}
-console.log(fizzBuzz(3));
+  if (inputValue % 3 === 0 && inputValue % 5 === 0) {
+    elResult.textContent = "FizzBuzz";
+    console.log("FizzBuzz");
+  } else if (inputValue % 3 === 0) {
+    elResult.textContent = "Fizz";
+    console.log("Fizz");
+  } else if (inputValue % 5 === 0) {
+    elResult.textContent = "Buzz";
+    console.log("Buzz");
+  } else return inputValue;
+});
